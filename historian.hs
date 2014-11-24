@@ -1,14 +1,24 @@
 import Data.List
 import Data.List.Split
+import Data.Time.Calendar
+import Data.Time.Format
+import Data.Time.LocalTime
+import Data.Time.Git
+import System.Locale
 import System.Process
 
 
 -- The program - a function from a list of strings (git log) to another list of strings (output)
 analyseHistory :: [String] -> [String]
 ----- YOUR CODE HERE -----
-analyseHistory log = log                                            -- echo
+--analyseHistory log = log                                            -- echo
 --analyseHistory log = [(show (length log)) ++ " commits"]            -- commit count
 --analyseHistory = sort . concat . map (words . last . splitOn "\t")  -- sorted list of words in commit subjects
+analyseHistory log = countDays (map (precious . (\x -> read x :: Integer)) times)
+                        where
+                            times = map ((!! 1) . (splitOn "\t")) log
+                            precious = (\x -> formatTime defaultTimeLocale "%a" (posixToUTC x))
+                            countDays = (\l -> [day ++ " -> " ++ (show (length (filter (== day) l))) | day <- ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]])
 
 
 -- You could use/adapt this as sample input to 'analyseHistory'
