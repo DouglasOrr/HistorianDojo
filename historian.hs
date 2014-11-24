@@ -27,7 +27,7 @@ gitLogArgs = ["--pretty=%h%x09%at%x09%an%x09%s"]
 -- Usage: ghci> run "path/to/repo"
 run :: String -> IO ()
 run repoDir = gitLog >>= (putStr . unlines . analyseHistory . lines)
-  where gitLog = readProcess "git" (["-C", repoDir, "log"] ++ gitLogArgs) ""
+  where gitLog = readProcess "git" (["--git-dir", (repoDir ++ "/.git"), "log"] ++ gitLogArgs) ""
 
 -- Pipe in git logs, pipe out results
 -- Usage: $ git log --pretty=... | runhaskell /path/to/historian.hs
