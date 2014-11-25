@@ -2,10 +2,10 @@
 
 ## Wordclouds:
 
-![SwiftKey-Android wordcloud](/DouglasOrr/HistorianDojo/blob/emlyn/SwiftKey-Android.png?raw=true "Wordcloud for SwiftKey Android")
-![SwiftKey-iOS wordcloud](/DouglasOrr/HistorianDojo/blob/emlyn/SwiftKey-Android.png?raw=true "Wordcloud for SwiftKey iOS")
-![Fluency wordcloud](/DouglasOrr/HistorianDojo/blob/emlyn/Fluency.png?raw=true "Wordcloud for Fluency")
-![Clarity wordcloud](/DouglasOrr/HistorianDojo/blob/emlyn/Clarity.png?raw=true "Wordcloud for Clarity")
+![SwiftKey-Android wordcloud](/SwiftKey-Android.png?raw=true "Wordcloud for SwiftKey Android")
+![SwiftKey-iOS wordcloud](/SwiftKey-iOS.png?raw=true "Wordcloud for SwiftKey iOS")
+![Fluency wordcloud](/Fluency.png?raw=true "Wordcloud for Fluency")
+![Clarity wordcloud](/Clarity.png?raw=true "Wordcloud for Clarity")
 
 We're writing some sort of git log processor to do some historical analysis of our codebase. To get going:
 
