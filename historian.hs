@@ -16,10 +16,10 @@ listWords :: [String] -> [String]
 listWords = concat . Data.List.map words
 
 bannedWords = Data.Set.fromList ["'master'", "master", "in", "of", "for", "the", "Merge", "and", "when", "with", "is", "not",
- "a", "an", "branch", "to", "into", "on", "from", "-", "pull", "request", "Minor:"]
+ "a", "an", "branch", "to", "into", "on", "from", "-", "pull", "request", "Minor:", "[update]", "'origin/master'"]
 goodWord :: String -> Bool
 goodWord w = not ((Data.Set.member w bannedWords) ||
-                  (w =~ "(git@)?github.com:.*" :: Bool) ||
+                  (w =~ "(git@|https://)?github.com[:/].*" :: Bool) ||
                   (w =~ "(richardtunnicliffe|tihancock)/.*" :: Bool))
 
 freqWords :: (String -> Bool) -> [String] -> [(String, Occur)]
