@@ -2,9 +2,13 @@
 
 ## Wordclouds:
 
+### SK Android:
 ![SwiftKey-Android wordcloud](/SwiftKey-Android.png?raw=true "Wordcloud for SwiftKey Android")
+### SK iOS:
 ![SwiftKey-iOS wordcloud](/SwiftKey-iOS.png?raw=true "Wordcloud for SwiftKey iOS")
+### Fluency:
 ![Fluency wordcloud](/Fluency.png?raw=true "Wordcloud for Fluency")
+### Clarity:
 ![Clarity wordcloud](/Clarity.png?raw=true "Wordcloud for Clarity")
 
 We're writing some sort of git log processor to do some historical analysis of our codebase. To get going:
