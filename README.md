@@ -17,7 +17,7 @@ We're writing some sort of git log processor to do some historical analysis of o
 
 Links & a personal favourite snippet from each project...
 
- - Emlyn & David's [word cloud](https://github.com/DouglasOrr/HistorianDojo/blob/emlynAdamDavid/historian.hs#L27)
+ - Emlyn, David & Adam's [word cloud](https://github.com/DouglasOrr/HistorianDojo/blob/emlynAdamDavid/historian.hs#L27)
 ```haskell
 [x | x <- (listWords log), (not (Data.Set.member x banned))]
 ```
